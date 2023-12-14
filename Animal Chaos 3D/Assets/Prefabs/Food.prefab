@@ -98,6 +98,7 @@ MonoBehaviour:
   speed: 300
   hungerValue: 25
   lifetime: 3
+  eatClip: {fileID: 8300000, guid: aebae0e89d575dc43ae340319487ef87, type: 3}
 --- !u!1001 &4733007033536266829
 PrefabInstance:
   m_ObjectHideFlags: 0

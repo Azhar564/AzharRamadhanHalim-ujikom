@@ -10,6 +10,7 @@ public class Animal : MonoBehaviour
     public int score = 1;
     public Slider hpBar;
     public ParticleSystem deathParticlePrefab;
+    public AudioClip deathClip;
 
     private Rigidbody rb;
     private int tempHungerNeed;
@@ -30,6 +31,7 @@ public class Animal : MonoBehaviour
             //Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             GameMananger.Instance.AddScore(score);
             GameMananger.Instance.onPause -= OnPause;
+            AudioSource.PlayClipAtPoint(deathClip, Vector3.zero);
             Destroy(gameObject);
         }
     }

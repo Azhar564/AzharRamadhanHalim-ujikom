@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Data")]
     public GameObject foodPrefab;
     public float speed = 350.0f;
-
+    public AudioClip throwClip;
     private float x;
 
     private Rigidbody rb;
@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(foodPrefab, transform.position + transform.forward, Quaternion.identity);
         PlayState("Throw");
+        AudioSource.PlayClipAtPoint(throwClip, Vector3.zero);
     }
 
     private void PlayState(string stateName)

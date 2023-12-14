@@ -233,6 +233,7 @@ MonoBehaviour:
   score: 5
   hpBar: {fileID: 5538685909821387739}
   deathParticlePrefab: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
 --- !u!54 &4991030856414215996
 Rigidbody:
   m_ObjectHideFlags: 0

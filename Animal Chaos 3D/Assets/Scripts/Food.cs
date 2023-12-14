@@ -8,6 +8,7 @@ public class Food : MonoBehaviour
     public float speed = 300.0f;
     public int hungerValue = 25;
     public float lifetime = 3.0f;
+    public AudioClip eatClip;
     private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Food : MonoBehaviour
         {
             Animal animal = other.GetComponent<Animal>();
             animal.hungerNeed -= hungerValue;
-
+            AudioSource.PlayClipAtPoint(eatClip, Vector3.zero);
             GameMananger.Instance.onPause -= OnPause;
             Destroy(gameObject);
         }
